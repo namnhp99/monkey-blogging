@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "reset";
+@import "content";
+@layer base {
+  body {
+    line-height: 1.5;
+    // -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    font-family: "Epilogue", sans-serif;
+    font-size: 16px;
+    color: #232323;
+  }
+}
+.container {
+  @apply w-full max-w-[1260px] mx-auto px-5;
+}
+.grid-layout {
+  @apply grid auto-cols-[235px] gap-5 lg:grid-cols-3 lg:gap-10 max-lg:snap-mandatory max-lg:overflow-x-auto max-lg:grid-flow-col;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  & > * {
+    scroll-snap-align: start;
+  }
+  &--primary {
+    grid-auto-columns: 220px;
+    @media screen and (min-width: 1024px) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+}
+.form-layout {
+  @apply grid grid-cols-1 lg:grid-cols-2 lg:gap-x-10 mb-5 lg:mb-10;
+}
+.flatpickr-input {
+  @apply rounded-lg p-[15px] font-medium border border-[#f1f1f3];
+}
+.flatpickr-input.active {
+  @apply bg-white border-[#171725];
+}
