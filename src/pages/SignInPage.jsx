@@ -85,10 +85,7 @@ const SignInPage = () => {
       });
       navigate("/");
     } catch (error) {
-      console.log(
-        "🚀 ~ file: SignInPage.jsx:69 ~ signInWithGoogle ~ error:",
-        error.message
-      );
+      toast(error.message);
     }
   };
   return (
