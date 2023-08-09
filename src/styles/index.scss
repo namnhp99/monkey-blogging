@@ -37,8 +37,8 @@
   @apply grid grid-cols-1 lg:grid-cols-2 lg:gap-x-10 mb-5 lg:mb-10;
 }
 .flatpickr-input {
-  @apply rounded-lg p-[15px] font-medium border border-[#f1f1f3];
+  @apply p-[15px] border-[#f1f1f3] rounded-lg  font-medium border;
 }
 .flatpickr-input.active {
-  @apply bg-white border-[#171725];
+  @apply border-[#171725] bg-white;
 }
